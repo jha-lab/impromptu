@@ -1,0 +1,161 @@
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Im-Promptu: In-Context Composition from Image Prompts</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Open+Sans">
+<link rel="stylesheet" href="./files/main.css">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DW8VJP7LGQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DW8VJP7LGQ');
+</script>
+
+<body>
+<div class="content-container">
+    <h2 class="title">Im-Promptu: In-Context Composition from Image Prompts <img src="./files/picture.svg" style="height:32px;width:32px;vertical-align:middle"/><img src="./files/lightning.svg" style="height:32px;width:32px;vertical-align:middle"/></h2>
+
+    <div class="links">
+        <a href="./files/paper.pdf">Paper</a> |
+        <a href="https://arxiv.org/abs/2305.17262">arXiv</a> |
+        <a href="">Code & Benchmarks (coming soon!)</a> |
+        <a href="./files/bib.txt">BibTeX</a> |
+        <a href="https://twitter.com/bhish_98/status/1664385391552786433">Twitter Thread</a>
+    </div>
+
+    <div class="authors">
+        <a href="https://bhishmadedhia.com">Bhishma Dedhia</a>,
+        <a href="https://mbchang.github.io/">Michael Chang</a>,
+        <a href="https://www.jakesnell.com/">Jake C. Snell</a>,
+        <a href="https://cocosci.princeton.edu/tom/index.php">Thomas L. Griffiths</a>,
+        and <a href="">Niraj K. Jha</a>
+    </div>
+
+    <div class="teaser">
+        <!-- <div class="teaser-title">Composing a scene</div> -->
+        <img src="files/main.gif"/>
+        <div class="teaser-subtitle">
+            <span class="arrow-left"></span>
+            <span class="arrow-text">Adding individual objects</span>
+            <span class="arrow-right"></span>
+            <span class="arrow-head"></span>
+        </div>
+    </div>
+
+    <div class="summary">
+        <h3>Summary</h3>
+        <p>
+            We introduce Im-Promptu, a method for solving visual analogies via in-context learning. Under the hood, we formalize an isomorphism between learning to abstract out tasks from composable elements of natural language tokens in language models and 
+            learning to implicitly infer composition rules from elements of visual scenes. Our experiments show that tokenizing visual input appropriately is a critical step in visual in-context learning. Having being trained on primitive tasks of a visual analogy benchmark, our object-centric learners learn to generalize to more complex contexts.
+    </div>
+
+    <div class="datasets">
+        <h3> Benchmarks</h3>
+        <p>
+            Composable Image spaces provide a semantically rich, simple, and scalable avenue for setting up visual-analogy tasks. To this end, we use three popular visual spaces
+             (<a href="https://github.com/deepmind/3d-shapes">[1]</a>,  <a href="https://cs.stanford.edu/people/jcjohns/clevr/">[2]</a>, <a href="https://www.bitmoji.com/">[3]</a>) to systematically measure the generalization properties of in-context learners. Each benchmark is comprised of training tasks where a single image attribute is varied at a time. Then at test time the agents are evaluated on their ability to generalize to multi-hop contexts.
+        </p>
+        
+        <div class="center_picture">
+        <p class="caption">Primitive and composite tasks over the three benchmarks</p>
+        <img src="files/benchmark.png"/>
+          </div>
+
+      
+    </div>
+
+    <div class="architecture">
+        <h3>Architecture</h3>
+        <p>
+            Language based in-context learners are parametrized by two crucial components: (1) a tokenizer that chunks natural language into composable tokens and (2) a transformer that attends to the context tokens to solve the user specified task. We transport these mechanisms into the visual domain.
+            More concretely, we model visual tokenizers across the compositional continuum, from a simple monolithic vector to object-centric slots. Then for an analogy A:B::C:D, a cross-attention transformer attends to the context tokens A, B, and C and predicts D.
+        </p>
+        <div class="center_picture">
+            <p class="caption">A cross-attention transformer attends to the context tokens to solve visual analogies</p>
+
+            <img src="files/architecture.png"/>
+          
+        </div>
+    </div>
+
+    <div class="results-section">
+        <h3>Primitive Task Extrapolation</h3>
+       <p> In the first set of experiments, the ability to extend learned composition rules to novel domain pairs is tested. For example, if the agent was trained to modify object color from blue to green, this extrapolation regime tests whether it can subsequently modify an orange object to a red one from context examples. Our experiments showed that learned vector representations afford simple and agile analogy solving for primitive extrapolation. However, as the complexity of the visual space increases, the vector representations fail to capture semantic consistency and visual quality deteriorates.</p>
+       <div class="center_picture">
+        <p class="caption">Primitive analogy extrapolation tasks</p>
+        <img src="files/primtive_extrapolation.png"></img>
+        <div class="subtitle">
+            <span class="arrow-left results"></span>
+            <span class="arrow-text results">Increasing object coherence</span>
+            <span class="arrow-right results"></span>
+            <span class="arrow-head results"></span>
+        </div>
+        </div>
+            
+    </div>
+       
+    <div class="results-section">
+        <h3>Composite Task Extrapolation</h3>
+        <p> Here we present our agents with multi-hop contexts where more than one composable attribute is changed at a time. Effect of object-centric biases is strong and object tokens reliably produce high fidelity analogy completions. </p>
+        <div class="center_picture">
+            <p class="caption">Two hop contexts</p>
+            <img src="files/two_hop.png"></img>
+            <div class="subtitle">
+                <span class="arrow-left results"></span>
+                <span class="arrow-text results">Increasing object coherence</span>
+                <span class="arrow-right results"></span>
+                <span class="arrow-head results"></span>
+            </div>
+        </div>
+        <div class="center_picture">
+            <p class="caption">Three hop contexts</p>
+            <img src="files/three_hop.png"></img>
+            <div class="subtitle">
+                <span class="arrow-left results"></span>
+                <span class="arrow-text results">Increasing object coherence</span>
+                <span class="arrow-right results"></span>
+                <span class="arrow-head results"></span>
+            </div>
+        </div>
+        <div class="center_picture">
+            <p class="caption">Four hop contexts</p>
+            <img src="files/four_hop.png"></img>
+            <div class="subtitle">
+                <span class="arrow-left results"></span>
+                <span class="arrow-text results">Increasing object coherence</span>
+                <span class="arrow-right results"></span>
+                <span class="arrow-head results"></span>
+            </div>
+        </div>
+    
+    </div>
+    <div class="results-section">
+    <h3>Novel Programming Interface: Prompt Engineering with Im-Promptu</h3>
+    <p>While natural-language provides an intuitive interface for tasks
+        that have a fundamental degree of language abstraction (writing code, summarization, symbolic
+        manipulation, etc.), it is not a priori straightforward that textual descriptions should entirely scaffold image
+        generators. Coming up with natural-language prompts for complex visual entities is often tedious
+        and unintuitive. Im-Promptu provides a new image generation avenue by engineering appropriate image-prompts for a visual-analogy to generate a desired output.</p>
+        
+        <div class="center_picture">
+        <p class="caption">Creating a scene using textual descriptions is tedious and Text-to-Image models don't understand object relations. On the other hand one can use existing visual assets to setup an analogy with Im-Promptu</p>
+        <img src="files/prompt_engineering.png"></img>
+        </div>
+    </div>
+    
+</div>
+</div>
+</body>
+
+</html>

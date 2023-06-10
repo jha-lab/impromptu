@@ -1,0 +1,8 @@
+@misc{dedhia2023impromptu,
+      title={Im-Promptu: In-Context Composition from Image Prompts}, 
+      author={Bhishma Dedhia and Michael Chang and Jake C. Snell and Thomas L. Griffiths and Niraj K. Jha},
+      year={2023},
+      eprint={2305.17262},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
