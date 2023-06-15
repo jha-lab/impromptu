@@ -36,17 +36,18 @@ a colored floor in front of a colored wall viewed from different orientations. T
 
 <!-- insert table -->
 
-> **Source**: [3D Shapes Dataset](https://github.com/deepmind/3d-shapes) <br/>
-> **Primitive Task:** {Property} | {Domain Size} <br/>
->  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Object Color -- 10<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Wall Color -- 10<br/>
->  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Floor Color -- 10<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Scene Orientation -- 15<br/>
-> **Examples per task:** 3 <br/>
-> **Number of Training Tasks:** 80000 <br/>
-> **Number of Primitive Extrapolation Tasks:** 1000 <br/>
-> **Number of Composite Extrapolation Tasks:** 1000 $\forall$ k $\in$ {2,3,4} <br/>
- 
+
+ **Source**: [3D Shapes Dataset](https://github.com/deepmind/3d-shapes) <br/>
+ **Primitive Task:** {Property} | {Domain Size} <br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Object Color -- 10<br/>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Wall Color -- 10<br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Floor Color -- 10<br/>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Scene Orientation -- 15<br/>
+ **Examples per task:** 3 <br/>
+ **Number of Training Tasks:** 80000 <br/>
+ **Number of Primitive Extrapolation Tasks:** 1000 <br/>
+ **Number of Composite Extrapolation Tasks:** 1000 $\forall$ k $\in$ {2,3,4} <br/>
+
 ### Examples 
 
 <!-- insert images with caption -->
@@ -84,16 +85,16 @@ The link to the benchmark is [here]()
 BitMoji is an avatar creator service for social media users that
 allows them to create intricate cartoon faces. We create visual analogies using four underlying dynamic elements of the avatar: {skin tone, hair type, facial hair type, eyewear type}.
 
-> **Source**: [BitMoji API](https://www.bitmoji.com/) <br/>
-> **Primitive Task:** {Property} | {Domain Size} <br/>
->  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Skin Tone -- 3<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hair Style -- 10<br/>
->  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Facial Hair -- 5<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Eyewear -- 5<br/>
-> **Examples per task:** 3 <br/>
-> **Number of Training Tasks:** 80000 <br/>
-> **Number of Primitive Extrapolation Tasks:** 1000 <br/>
-> **Number of Composite Extrapolation Tasks:** 1000 $\forall$ k $\in$ {2,3} <br/>
+ **Source**: [BitMoji API](https://www.bitmoji.com/) <br/>
+ **Primitive Task:** {Property} | {Domain Size} <br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Skin Tone -- 3<br/>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hair Style -- 10<br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Facial Hair -- 5<br/>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Eyewear -- 5<br/>
+ **Examples per task:** 3 <br/>
+ **Number of Training Tasks:** 80000 <br/>
+ **Number of Primitive Extrapolation Tasks:** 1000 <br/>
+ **Number of Composite Extrapolation Tasks:** 1000 $\forall$ k $\in$ {2,3} <br/>
 
 ### Examples
 
@@ -129,14 +130,14 @@ the visual component consisting of multiple objects lying in a scene. We use the
 engine to set up primitive tasks that include adding and deleting the same object across various
 scenes.
 
-> **Source**: [CLEVr Dataset](https://arxiv.org/abs/1612.06890) <br/>
-> **Primitive Task:** {Property} | {Domain Size} <br/>
->  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add object -- 1000<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Delete Object -- 1000<br/>
-> **Examples per task:** 3 <br/>
-> **Number of Training Tasks:** 55000 <br/>
-> **Number of Primitive Extrapolation Tasks:** 1000 <br/>
-> **Number of Composite Extrapolation Tasks:** 200 $\forall$ k $\in$ {2,3} <br/>
+ **Source**: [CLEVr Dataset](https://arxiv.org/abs/1612.06890) <br/>
+**Primitive Task:** {Property} | {Domain Size} <br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add object -- 1000<br/>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Delete Object -- 1000<br/>
+ **Examples per task:** 3 <br/>
+ **Number of Training Tasks:** 55000 <br/>
+ **Number of Primitive Extrapolation Tasks:** 1000 <br/>
+ **Number of Composite Extrapolation Tasks:** 200 $\forall$ k $\in$ {2,3} <br/>
 
 ### Examples
 
