@@ -64,7 +64,7 @@
         <h3> Benchmarks</h3>
         <p>
             Composable Image spaces provide a semantically rich, simple, and scalable avenue for setting up visual-analogy tasks. To this end, we use three popular visual spaces
-             (<a href="https://github.com/deepmind/3d-shapes">[1]</a>,  <a href="https://cs.stanford.edu/people/jcjohns/clevr/">[2]</a>, <a href="https://www.bitmoji.com/">[3]</a>) to systematically measure the generalization properties of in-context learners. Each benchmark is comprised of training tasks where a single image attribute is varied at a time. Then at test time the agents are evaluated on their ability to generalize to multi-hop contexts.
+             (<a href="https://github.com/deepmind/3d-shapes">[1]</a>,  <a href="https://cs.stanford.edu/people/jcjohns/clevr/">[2]</a>, <a href="https://www.bitmoji.com/">[3]</a>) to systematically measure the generalization properties of in-context learners. Each benchmark is composed of training tasks where a single image attribute is varied at a time. Then at test time the agents are evaluated on their ability to generalize to multi-hop contexts.
         </p>
         
         <div class="center_picture">
@@ -78,7 +78,7 @@
     <div class="architecture">
         <h3>Architecture</h3>
         <p>
-            Language based in-context learners are parametrized by two crucial components: (1) a tokenizer that chunks natural language into composable tokens and (2) a transformer that attends to the context tokens to solve the user specified task. We transport these mechanisms into the visual domain.
+            Language based in-context learners are parametrized by two crucial components: (1) a tokenizer that chunks natural language into composable tokens and (2) a transformer that attends to the context tokens to solve the user-specified task. We transport these mechanisms into the visual domain.
             More concretely, we model visual tokenizers across the compositional continuum, from a simple monolithic vector to object-centric slots. Then for an analogy A:B::C:D, a cross-attention transformer attends to the context tokens A, B, and C and predicts D.
         </p>
         <div class="center_picture">
@@ -107,7 +107,7 @@
        
     <div class="results-section">
         <h3>Composite Task Extrapolation</h3>
-        <p> Here we present our agents with multi-hop contexts where more than one composable attribute is changed at a time. Effect of object-centric biases is strong and object tokens reliably produce high fidelity analogy completions. </p>
+        <p> Here, we present our agents with multi-hop contexts where more than one composable attribute is changed at a time. Effect of object-centric biases is strong and object tokens reliably produce high-fidelity analogy completions. </p>
         <div class="center_picture">
             <p class="caption">Two hop contexts</p>
             <img src="files/two_hop.png"></img>
@@ -142,11 +142,11 @@
     </div>
     <div class="results-section">
     <h3>Novel Programming Interface: Prompt Engineering with Im-Promptu</h3>
-    <p>While natural-language provides an intuitive interface for tasks
+    <p>While natural language provides an intuitive interface for tasks
         that have a fundamental degree of language abstraction (writing code, summarization, symbolic
         manipulation, etc.), it is not a priori straightforward that textual descriptions should entirely scaffold image
-        generators. Coming up with natural-language prompts for complex visual entities is often tedious
-        and unintuitive. Im-Promptu provides a new image generation avenue by engineering appropriate image-prompts for a visual-analogy to generate a desired output.</p>
+        generators. Coming up with natural language prompts for complex visual entities is often tedious
+        and unintuitive. Im-Promptu provides a new image generation avenue by engineering appropriate image prompts for a visual-analogy to generate a desired output.</p>
         
         <div class="center_picture">
         <p class="caption">Creating a scene using textual descriptions is tedious and Text-to-Image models don't understand object relations. On the other hand one can use existing visual assets to setup an analogy with Im-Promptu</p>
