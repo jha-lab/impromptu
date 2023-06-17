@@ -27,7 +27,7 @@ This folder contains the visual analogy tasks used for the paper **Im-Promptu: I
 
 ## 3D Shapes Visual Analogy Benchmark
 
-The link to the benchmark is [here]() 
+The link to the benchmark is [here](https://drive.google.com/drive/folders/1O7v8SH93p_l1nmzlplK7dsIBK1ORIc5m?usp=sharing) 
 
 ### Description
 
@@ -78,7 +78,7 @@ a colored floor in front of a colored wall viewed from different orientations. T
 
 ## BitMoji Visual Analogy Benchmark
 
-The link to the benchmark is [here](https://drive.google.com/drive/folders/1O7v8SH93p_l1nmzlplK7dsIBK1ORIc5m?usp=sharing)
+The link to the benchmark is [here](https://drive.google.com/drive/folders/1P9VKs_SgvdZhxYq46KwOc_KCbT_1CNCa?usp=sharing)
 
 ### Description
 
@@ -123,7 +123,7 @@ allows them to create intricate cartoon faces. We create visual analogies using 
 
 ## CLEVr Visual Analogy
 
-Files can be downloaded from [here](https://drive.google.com/drive/folders/1dQzYd99PLg2qhc2fcuTN1ORsa32aGO8J?usp=sharing)
+Files can be downloaded from [here](https://drive.google.com/drive/folders/1dQzYd99PLg2qhc2fcuTN1ORsa32aGO8J?usp=drive_link)
 
 ### Description
 
