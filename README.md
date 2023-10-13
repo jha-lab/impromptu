@@ -8,7 +8,7 @@
 
 
 
-This is the official repository for the paper [Im-Promptu: In-Context Composition from Image Prompts](https://arxiv.org/abs/2305.17262). Website for a quick visual summary of this work can be found [here](https://jha-lab.github.io/impromptu/).
+This is the official repository for the NeurIPS 2023 paper [Im-Promptu: In-Context Composition from Image Prompts](https://arxiv.org/abs/2305.17262). Website: [jha-lab.github.io/impromptu/](https://jha-lab.github.io/impromptu/).
 ## Table of Contents
 - [Im-Promptu: In-Context Composition from Image Prompts]
 
