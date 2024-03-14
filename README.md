@@ -1,4 +1,4 @@
-#  Im-Promptu: In-Context Composition from Image Prompts
+#  [NeurIPS 2023] Im-Promptu: In-Context Composition from Image Prompts
 
 ![Python Version](https://img.shields.io/badge/python-v3.6%20%7C%20v3.7%20%7C%20v3.8-blue)
 ![Conda](https://img.shields.io/badge/conda%7Cconda--forge-v4.8.3-blue)
